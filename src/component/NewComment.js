@@ -22,7 +22,7 @@ export default class NewComment extends Component {
       <div className="newComment">
         <h4 className="newComment__num">3 Comments</h4>
         <div className="newComment__new">
-          <img id="Mohan" src={Mohan} />
+          <img id="Mohan" src={Mohan} alt="mohan" />
           <div className="newComment__new--comment">
             <div id="setAside">
               <label>JOIN THE CONVERSATION</label>

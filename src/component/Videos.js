@@ -5,7 +5,7 @@ class Videos extends Component {
     return (
       <div className="videos__list">
         <div className="videos__list--thumbnail">
-          <img src={this.props.image} />
+          <img src={this.props.image} alt="thumbnail" />
         </div>
         <div className="videos__list--detail">
           <h4 id="title">{this.props.title}</h4>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Comments from "../container/Comments";
+import Comments from "../component/Comments";
 import axios from "axios";
+import ConvertTime from "../my-func/ConvertTime";
 
 const commentsUrl =
   "https://project-1-api.herokuapp.com/comments?api_key=labKey";
@@ -15,7 +16,7 @@ class CommentList extends Component {
         return {
           Comment: comment.comment,
           Name: comment.name,
-          Date: comment.timestamp
+          Date: ConvertTime(comment.timestamp)
         };
       });
 

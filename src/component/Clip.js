@@ -36,11 +36,11 @@ class Clip extends Component {
           </div>
           <div className="clip__likes">
             <div id="views">
-              <img src={Views} />
+              <img src={Views} alt="views" />
               {mainVideo.views}
             </div>
             <div id="hearts">
-              <img src={Likes} />
+              <img src={Likes} alt="likes" />
               {mainVideo.likes}
             </div>
           </div>

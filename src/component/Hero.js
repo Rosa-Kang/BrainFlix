@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import Views from "../assets/icons/SVG/Icon-views.svg";
-import Likes from "../assets/icons/SVG/Icon-likes.svg";
-import Play from "../assets/icons/SVG/Icon-play.svg";
 import Fullscreen from "../assets/icons/SVG/Icon-fullscreen.svg";
+import Play from "../assets/icons/SVG/Icon-play.svg";
 import Volume from "../assets/icons/SVG/Icon-volume.svg";
-
-const url =
-  "https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=46a5c4b9-e4ed-4f7e-bbf7-be32f1a02279";
 
 class Hero extends Component {
   state = {
@@ -30,6 +25,7 @@ class Hero extends Component {
         Cow Rampage title`
     }
   };
+
   render() {
     return (
       <section id="background">
@@ -38,13 +34,13 @@ class Hero extends Component {
             <video poster="./assets/images/video-list-0.jpg" />
           </div>
           <div className="hero__scroll">
-            <img id="play" src={Play} />
+            <img id="play" src={Play} alt="play-button" />
             <div className="hero__scroll--hr">
               <hr /> <p>0:00 / 0:42</p>
             </div>
             <div className="hero__scroll--stuffs">
-              <img id="fullscreen" src={Fullscreen} />
-              <img id="volume" src={Volume} />
+              <img id="fullscreen" src={Fullscreen} alt="curser" />
+              <img id="volume" src={Volume} alt="volume" />
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ class Comments extends Component {
   render() {
     return (
       <div className="users">
-        <img className="users__mercury" src={Mercury} />
+        <img className="users__mercury" src={Mercury} alt="mercury" />
         <div className="users__comment">
           <div className="users__comment--status">
             <div id="name">{this.props.Name}</div>
