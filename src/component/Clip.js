@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import Views from "../assets/icons/SVG/Icon-views.svg";
 import Likes from "../assets/icons/SVG/Icon-likes.svg";
 
