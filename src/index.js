@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import App from "./component/App";
 import * as serviceWorker from "./serviceWorker";
 import Upload from "./component/Upload";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Route path="/" exact component={App} />
-    <Route path="/upload" component={Upload} />
+    <Switch>
+      <Route path="/" exact component={App} />
+      <Route path="/upload" component={Upload} />
+      <Route path="/video/:id" component={App} />
+    </Switch>
   </BrowserRouter>,
   document.getElementById("root")
 );

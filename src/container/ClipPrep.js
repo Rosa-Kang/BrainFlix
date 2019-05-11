@@ -5,18 +5,34 @@ import { Switch, Route, Link } from "react-router-dom";
 
 class ClipPrep extends Component {
   state = {
-    mainVideo: []
+    main: []
   };
 
   componentDidMount() {
-    const newId = this.props.match.params.id;
-    const videoUrl = `https://project-2-api.herokuapp.com/video/${newId}?api_key=46a5c4b9-e4ed-4f7e-bbf7-be32f1a02279`;
+    const videoUrl = `https://project-2-api.herokuapp.com/video/?api_key=46a5c4b9-e4ed-4f7e-bbf7-be32f1a02279`;
     axios.get(videoUrl).then(response => {
       this.setState({
-        mainVideo: response.data
+        main: response.data
       });
     });
   }
+
+  render() {
+    return (
+      <div className="App">
+        <nav>
+          <Link to="/">Home</Link> |
+          <Link to="/about">About</Link>
+        </nav>
+        <Switch>
+          <Route path="/" exact render={(props) => {
+            console.log(props)
+            return <HomePage users={this.state.users} />
+          }} />
+          <Route path="/about" exact component={AboutPage} />
+          <Route path="/user/:username" exact render={(props) => {
+
+            console.log(props)
 
   render() {
     const mainVideo = this.state.mainVideo;

@@ -15,7 +15,7 @@
     margin-bottom: 32px;
   }
 
-  #name {
+  #channel {
     font-family: mydemi;
     margin-right: 8px;
   }
@@ -38,7 +38,7 @@
     }
   }
 
-  &__comment {
+  &__description {
     font-size: 13px;
     border-top: 1px solid #afafaf;
     padding-top: 24px;
@@ -64,7 +64,7 @@
       margin: 0px;
     }
 
-    &__comment {
+    &__description {
       border: none;
       padding-top: 40px;
       padding-right: 224px;
@@ -78,7 +78,7 @@
     &__likes {
       padding-right: 32px;
     }
-    &__comment {
+    &__description {
       width: 472px;
       padding-right: 248px;
       font-size: 13px;
