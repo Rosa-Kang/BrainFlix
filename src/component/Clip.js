@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Views from "../assets/icons/SVG/Icon-views.svg";
 import Likes from "../assets/icons/SVG/Icon-likes.svg";
+import ConvertTime from "../my-func/ConvertTime";
 
 class Clip extends Component {
   render() {
@@ -10,7 +11,7 @@ class Clip extends Component {
         <div id="clip">
           <div className="clip__letters">
             <div id="channel">{this.props.videos.channel}</div>
-            <div id="date">{this.props.videos.timestamp}</div>
+            <div id="date">{ConvertTime(this.props.videos.timestamp)}</div>
           </div>
           <div className="clip__likes">
             <div id="views">

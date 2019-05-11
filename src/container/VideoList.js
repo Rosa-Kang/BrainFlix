@@ -8,10 +8,10 @@ class VideoList extends Component {
         <div className="videos__next">NEXT VIDEO</div>
         {this.props.videos.map(video => (
           <Videos
-            title={this.props.title}
-            channel={this.props.channel}
-            image={this.props.image}
-            id={this.props.id}
+            title={this.props.videos.title}
+            channel={this.props.videos.channel}
+            image={this.props.videos.image}
+            id={this.props.videos.id}
           />
         ))}
       </div>

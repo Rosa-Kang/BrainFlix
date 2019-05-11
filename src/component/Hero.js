@@ -8,9 +8,8 @@ class Hero extends Component {
     return (
       <section id="background">
         <div className="hero">
-          <div className="hero__play">
-            <video poster={this.props.videos.image} />
-          </div>
+          <video className="hero__play" poster={this.props.videos.image} />
+
           <div className="hero__scroll">
             <img id="play" src={Play} alt="play-button" />
             <div className="hero__scroll--hr">

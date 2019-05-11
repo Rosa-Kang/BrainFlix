@@ -5,15 +5,13 @@
 }
 .hero {
   background-color: black;
-  background-image: url("../assets/images/video-list-0.jpg");
-  background-size: cover;
-  height: 57.5vw;
-  background-position: center;
-  position: relative;
 
-  &__play {
+  video {
     width: 100%;
     align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
   }
 
   &__scroll {
@@ -21,12 +19,11 @@
     padding: 10px 5px 10px 12px;
     display: flex;
     width: 90%;
-    position: absolute;
     bottom: 1px;
 
     &--hr {
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(134, 83, 83, 0.4);
       border-radius: 4px;
       display: flex;
       margin: 0px 5px;
@@ -79,6 +76,10 @@
   .hero {
     margin: 0px 248px;
     height: 37.5vw;
+
+    video {
+      height: 37.5vw;
+    }
 
     &__scroll {
       padding: 10px 5px 10px 35px;

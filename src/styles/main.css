@@ -193,18 +193,16 @@ body {
 
 .hero {
   background-color: black;
-  background-image: url("../assets/images/video-list-0.jpg");
-  background-size: cover;
-  height: 57.5vw;
-  background-position: center;
-  position: relative;
 }
 
-.hero__play {
+.hero video {
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 .hero__scroll {
@@ -214,13 +212,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 90%;
-  position: absolute;
   bottom: 1px;
 }
 
 .hero__scroll--hr {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(134, 83, 83, 0.4);
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,6 +273,9 @@ body {
     margin: 0px 248px;
     height: 37.5vw;
   }
+  .hero video {
+    height: 37.5vw;
+  }
   .hero__scroll {
     padding: 10px 5px 10px 35px;
   }
@@ -323,7 +323,7 @@ body {
   margin-bottom: 32px;
 }
 
-.clip #name {
+.clip #channel {
   font-family: mydemi;
   margin-right: 8px;
 }
@@ -352,7 +352,7 @@ body {
   margin-right: 8px;
 }
 
-.clip__comment {
+.clip__description {
   font-size: 13px;
   border-top: 1px solid #afafaf;
   padding-top: 24px;
@@ -383,7 +383,7 @@ body {
   .clip #hearts {
     margin: 0px;
   }
-  .clip__comment {
+  .clip__description {
     border: none;
     padding-top: 40px;
     padding-right: 224px;
@@ -395,7 +395,7 @@ body {
   .clip__likes {
     padding-right: 32px;
   }
-  .clip__comment {
+  .clip__description {
     width: 472px;
     padding-right: 248px;
     font-size: 13px;
