@@ -31,22 +31,45 @@ class App extends Component {
 
   componentDidMount() {
     axios.get(videoUrl).then(video => {
+      const newVideos = video.data.map(videolist => {
+        return {
+          id: videolist.id,
+          title: videolist.title,
+          channel: videolist.channel,
+          image: videolist.image
+        };
+      });
+
       const mainVideoUrl = `https://project-2-api.herokuapp.com/videos/${
         video.data[0].id
       }?api_key=46a5c4b9-e4ed-4f7e-bbf7-be32f1a02279`;
+
       axios.get(mainVideoUrl).then(response => {
-        console.log(response.data);
         this.setState({
-          videos: video.data,
-          mainVideo: response.data
+          mainVideo: response.data,
+          videos: newVideos
         });
       });
     });
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    const videoId = this.props.match.params.id;
+    const currentVideo = `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=46a5c4b9-e4ed-4f7e-bbf7-be32f1a02279`;
+
+    axios.get(currentVideo).then(response => {
+      if (this.props.match.params.id !== this.state.mainVideo.id) {
+        this.setState({
+          mainVideo: response.data
+        });
+      }
+    });
+    console.log(this.state.mainVideo);
+  }
 
   render() {
+    console.log(this.state.mainVideo);
+
     return (
       <div className="App">
         <Header history={this.props.history} />
@@ -55,9 +78,12 @@ class App extends Component {
           <div className="boxClip">
             <Clip videos={this.state.mainVideo} />
             <NewComment />
-            <CommentList videos={this.state.videos} />
+            <CommentList videos={this.state.mainVideo} />
           </div>
-          <VideoList videos={this.state.videos} />
+          <VideoList
+            videos={this.state.videos}
+            mainVideo={this.state.mainVideo}
+          />
         </div>
       </div>
     );

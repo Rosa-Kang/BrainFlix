@@ -5,26 +5,27 @@ import ConvertTime from "../my-func/ConvertTime";
 
 class Clip extends Component {
   render() {
+    const clipVideo = this.props.videos;
     return (
       <section className="clip">
-        <div className="clip__title">{this.props.videos.title}</div>
+        <div className="clip__title">{clipVideo.title}</div>
         <div id="clip">
           <div className="clip__letters">
-            <div id="channel">{this.props.videos.channel}</div>
-            <div id="date">{ConvertTime(this.props.videos.timestamp)}</div>
+            <div id="channel">{clipVideo.channel}</div>
+            <div id="date">{ConvertTime(clipVideo.timestamp)}</div>
           </div>
           <div className="clip__likes">
             <div id="views">
               <img src={Views} alt="views" />
-              {this.props.videos.views}
+              {clipVideo.views}
             </div>
             <div id="hearts">
               <img src={Likes} alt="likes" />
-              {this.props.videos.likes}
+              {clipVideo.likes}
             </div>
           </div>
         </div>
-        <div className="clip__description">{this.props.videos.description}</div>
+        <div className="clip__description">{clipVideo.description}</div>
       </section>
     );
   }

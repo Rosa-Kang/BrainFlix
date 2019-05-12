@@ -28,6 +28,7 @@
 
     &--detail {
       height: 64px;
+      width: 61%;
       h4 {
         margin: 0px 0px 0px 16px;
         font-size: 13.5px;
@@ -61,7 +62,6 @@
       }
       &--detail {
         height: 70px;
-        padding-right: 396px;
 
         #channel {
           margin: 5px 0px 0px 16px;
@@ -71,7 +71,7 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .videos {
     margin: 0px;
 

@@ -157,7 +157,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .header {
     margin: 16px 180px;
   }
@@ -193,16 +193,21 @@ body {
 
 .hero {
   background-color: black;
+  position: relative;
+  height: 50vw;
 }
 
 .hero video {
   width: 100%;
+  height: 50vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-size: cover;
   background-position: center;
   position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hero__scroll {
@@ -213,6 +218,7 @@ body {
   display: flex;
   width: 90%;
   bottom: 1px;
+  position: absolute;
 }
 
 .hero__scroll--hr {
@@ -263,12 +269,15 @@ body {
     margin: 0px 34px;
     height: 52.1vw;
   }
+  .hero video {
+    height: 52.1vw;
+  }
   .hero__scroll {
     padding: 10px 5px 10px 20px;
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .hero {
     margin: 0px 248px;
     height: 37.5vw;
@@ -391,7 +400,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .clip__likes {
     padding-right: 32px;
   }
@@ -468,6 +477,7 @@ body {
 .newComment__new--comment textarea {
   border-radius: 4px;
   width: 91.6%;
+  background-color: #fafafa;
   margin: 6px 0px 16px 0px;
 }
 
@@ -521,7 +531,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .newComment {
     padding-bottom: 4px;
   }
@@ -636,7 +646,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .users__comment--mention {
     font-size: 15px;
   }
@@ -697,6 +707,7 @@ body {
 
 .videos__list--detail {
   height: 64px;
+  width: 61%;
 }
 
 .videos__list--detail h4 {
@@ -731,14 +742,13 @@ body {
   }
   .videos__list--detail {
     height: 70px;
-    padding-right: 396px;
   }
   .videos__list--detail #channel {
     margin: 5px 0px 0px 16px;
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .videos {
     margin: 0px;
   }
@@ -754,6 +764,198 @@ body {
   }
   .videos__list--detail {
     padding: 0px;
+  }
+}
+
+/* Upload*/
+@font-face {
+  font-family: Regular;
+  src: url("../assets/globalfont/AvenirNextProLT/Linotype-AvenirNextLTPro-Light.otf");
+}
+
+@font-face {
+  font-family: myDemi;
+  src: url("../assets/globalfont/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: myMedium;
+  src: url("../assets/globalfont/AvenirNextProLT/Linotype-AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: myBold;
+  src: url("../assets/globalfont/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf");
+}
+
+.upload {
+  margin: 0px;
+}
+
+.upload__title {
+  font-family: myBold;
+  margin: 0px;
+  border-top: 1px solid #e1e1e1;
+  font-size: 27px;
+  padding: 24px 16px 32px 16px;
+}
+
+.upload__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px 16px;
+}
+
+.upload__video #right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.upload__video--text {
+  margin: 0px 0px 8px 0px;
+  font-family: myDemi;
+  font-size: 15px;
+  color: #afafaf;
+}
+
+.upload__video--text--area {
+  height: 143px;
+  width: 99%;
+  font-size: 13px;
+  padding-top: 10px;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+.upload__video video {
+  border-radius: 4px;
+  width: 288px;
+  height: 153px;
+  margin-bottom: 32px;
+  background-image: url("../assets/images/upload-video-preview.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.upload__video input {
+  height: 32px;
+  font-size: 13px;
+  padding-top: 2px;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.upload__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.upload__button--publish {
+  font-size: 15px;
+  height: 48px;
+  width: 95vw;
+  border-radius: 4px;
+  background: #0095ff;
+  color: white;
+}
+
+.upload__button--cancel {
+  font-size: 15px;
+  height: 48px;
+  width: 95vw;
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+  color: #0095ff;
+}
+
+@media only screen and (min-width: 768px) {
+  .upload__video {
+    margin: 0px 24px;
+    border-top: 1px solid #e1e1e1;
+  }
+  .upload__video p {
+    padding-top: 40px;
+  }
+  .upload__video--text--area {
+    margin-bottom: 40px;
+  }
+  .upload video {
+    margin-bottom: 40px;
+    width: 344px;
+    height: 183px;
+  }
+  .upload__button {
+    margin: 0px 24px;
+    padding-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border-top: 1px solid #e1e1e1;
+  }
+  .upload__button--publish, .upload__button--cancel {
+    width: 160px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .upload__title {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .upload__video {
+    margin: 0px 180px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .upload__video--text--area {
+    width: 715px;
+  }
+  .upload video {
+    margin: 0px 24px 32px 0px;
+  }
+  .upload #right {
+    padding-top: 40px;
+  }
+  .upload__button {
+    margin: 0px 180px;
   }
 }
 /*# sourceMappingURL=main.css.map */
