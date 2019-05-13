@@ -53,7 +53,14 @@ class App extends Component {
     });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevState) {
+    if (
+      typeof this.props.match.params.id === "undefined" &&
+      prevState.location.pathname !== "/"
+    ) {
+      //console.log('working');
+      window.location.reload();
+    }
     const videoId = this.props.match.params.id;
     const currentVideo = `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=46a5c4b9-e4ed-4f7e-bbf7-be32f1a02279`;
 
@@ -69,7 +76,6 @@ class App extends Component {
 
   render() {
     console.log(this.state.mainVideo);
-
     return (
       <div className="App">
         <Header history={this.props.history} />
@@ -77,7 +83,7 @@ class App extends Component {
         <div className="box">
           <div className="boxClip">
             <Clip videos={this.state.mainVideo} />
-            <NewComment />
+            <NewComment videos={this.state.mainVideo} />
             <CommentList videos={this.state.mainVideo} />
           </div>
           <VideoList

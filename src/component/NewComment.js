@@ -20,7 +20,9 @@ export default class NewComment extends Component {
   render() {
     return (
       <div className="newComment">
-        <h4 className="newComment__num">3 Comments</h4>
+        <h4 className="newComment__num">
+          {this.props.videos.comments.length} Comments
+        </h4>
         <div className="newComment__new">
           <img id="Mohan" src={Mohan} alt="mohan" />
           <div className="newComment__new--comment">

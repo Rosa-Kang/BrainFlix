@@ -35,7 +35,7 @@
       }
       #title {
         font-family: myMedium;
-        white-space: nowrap;
+        overflow-wrap: break-word;
         width: 70%;
         overflow: hidden;
         text-overflow: ellipsis;

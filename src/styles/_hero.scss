@@ -28,21 +28,28 @@
 
     &--hr {
       width: 100%;
-      background-color: rgba(134, 83, 83, 0.4);
+      background-color: rgba(0, 0, 0, 0.4);
       border-radius: 4px;
       display: flex;
+      justify-content: center;
       margin: 0px 5px;
 
       hr {
         height: 1px;
+        width: 77%;
         margin: auto 10px;
         border-color: black;
         background: black;
-        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 0px;
       }
 
       p {
-        display: none;
+        color: white;
+        white-space: nowrap;
+        font-size: 1.5vw;
+        margin-top: 8px;
+        margin-bottom: 0px;
       }
     }
     &--stuffs {
@@ -77,6 +84,18 @@
 
     &__scroll {
       padding: 10px 5px 10px 20px;
+
+      &--hr {
+        hr {
+          margin-top: 13px;
+          margin-bottom: 0px;
+        }
+
+        p {
+          margin-top: 6px;
+          margin-bottom: 0px;
+        }
+      }
     }
   }
 }
@@ -92,6 +111,18 @@
 
     &__scroll {
       padding: 10px 5px 10px 35px;
+
+      &--hr {
+        hr {
+          width: 80%;
+          margin-top: 15px;
+        }
+
+        p {
+          font-size: 1.2vw;
+          margin-bottom: 5px;
+        }
+      }
     }
   }
 }

@@ -223,24 +223,33 @@ body {
 
 .hero__scroll--hr {
   width: 100%;
-  background-color: rgba(134, 83, 83, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0px 5px;
 }
 
 .hero__scroll--hr hr {
   height: 1px;
+  width: 77%;
   margin: auto 10px;
   border-color: black;
   background: black;
-  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .hero__scroll--hr p {
-  display: none;
+  color: white;
+  white-space: nowrap;
+  font-size: 1.5vw;
+  margin-top: 8px;
+  margin-bottom: 0px;
 }
 
 .hero__scroll--stuffs {
@@ -275,6 +284,14 @@ body {
   .hero__scroll {
     padding: 10px 5px 10px 20px;
   }
+  .hero__scroll--hr hr {
+    margin-top: 13px;
+    margin-bottom: 0px;
+  }
+  .hero__scroll--hr p {
+    margin-top: 6px;
+    margin-bottom: 0px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -287,6 +304,14 @@ body {
   }
   .hero__scroll {
     padding: 10px 5px 10px 35px;
+  }
+  .hero__scroll--hr hr {
+    width: 80%;
+    margin-top: 15px;
+  }
+  .hero__scroll--hr p {
+    font-size: 1.2vw;
+    margin-bottom: 5px;
   }
 }
 
@@ -717,7 +742,7 @@ body {
 
 .videos__list--detail #title {
   font-family: myMedium;
-  white-space: nowrap;
+  overflow-wrap: break-word;
   width: 70%;
   overflow: hidden;
   text-overflow: ellipsis;
