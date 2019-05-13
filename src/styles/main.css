@@ -876,6 +876,11 @@ body {
   margin-bottom: 32px;
 }
 
+.upload__video--text--area:focus {
+  border: solid 1.5px #0095ff;
+  outline: none;
+}
+
 .upload__video video {
   border-radius: 4px;
   width: 288px;
@@ -897,6 +902,11 @@ body {
   background-color: #fafafa;
   border-radius: 4px;
   margin-bottom: 24px;
+}
+
+.upload__video input:focus {
+  border: solid 1.5px #0095ff;
+  outline: none;
 }
 
 .upload__button {
