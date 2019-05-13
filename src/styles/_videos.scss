@@ -35,10 +35,16 @@
       }
       #title {
         font-family: myMedium;
-        overflow-wrap: break-word;
-        width: 70%;
-        overflow: hidden;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden !important;
         text-overflow: ellipsis;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        // display: -webkit-box;
+        // -webkit-box-orient: vertical;
+        width: 48vw;
       }
       #channel {
         margin: 8px 0px 8px 16px;
@@ -62,6 +68,10 @@
       }
       &--detail {
         height: 70px;
+
+        #title {
+          width: 25vw;
+        }
 
         #channel {
           margin: 5px 0px 0px 16px;
@@ -87,6 +97,10 @@
       margin: 29px 0px;
       &--detail {
         padding: 0px;
+
+        #title {
+          width: 11vw;
+        }
       }
     }
   }

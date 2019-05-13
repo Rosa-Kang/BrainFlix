@@ -3,7 +3,7 @@ body {
   font-family: Regular;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -526,14 +526,17 @@ body {
     margin: 0px 24px;
   }
   .newComment__new {
-    padding-right: 40px;
+    padding-right: 16px;
   }
   .newComment__new--comment {
-    width: 100%;
+    margin-left: 16px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: 2vw;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -545,13 +548,13 @@ body {
   .newComment__new--comment textarea {
     font-size: 15px;
     border-radius: 4px;
-    width: 400px;
+    width: 57.3vw;
     height: 1.2em;
     padding: 20px;
   }
   .newComment__new--comment #myButton {
-    font-size: 2vw;
-    width: 35.3%;
+    font-size: 1em;
+    width: 31.8%;
     height: 60px;
   }
 }
@@ -584,7 +587,8 @@ body {
   }
   .newComment__new--comment textarea {
     width: 85.25%;
-    height: 6px;
+    height: 10px;
+    padding-top: 10px;
   }
 }
 
@@ -742,10 +746,12 @@ body {
 
 .videos__list--detail #title {
   font-family: myMedium;
-  overflow-wrap: break-word;
-  width: 70%;
-  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden !important;
   text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  width: 48vw;
 }
 
 .videos__list--detail #channel {
@@ -768,6 +774,9 @@ body {
   .videos__list--detail {
     height: 70px;
   }
+  .videos__list--detail #title {
+    width: 25vw;
+  }
   .videos__list--detail #channel {
     margin: 5px 0px 0px 16px;
   }
@@ -789,6 +798,9 @@ body {
   }
   .videos__list--detail {
     padding: 0px;
+  }
+  .videos__list--detail #title {
+    width: 11vw;
   }
 }
 
@@ -920,6 +932,9 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .upload__title {
+    padding: 24px 24px 32px 24px;
+  }
   .upload__video {
     margin: 0px 24px;
     border-top: 1px solid #e1e1e1;
@@ -970,8 +985,15 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .upload__video p {
+    margin: 0px 0px 7px 0px;
+  }
+  .upload__video--text {
+    margin: 0px 0px 3px 0px;
+  }
   .upload__video--text--area {
     width: 715px;
+    height: 94px;
   }
   .upload video {
     margin: 0px 24px 32px 0px;

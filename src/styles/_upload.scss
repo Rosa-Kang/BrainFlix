@@ -90,6 +90,10 @@
 
 @media only screen and (min-width: 768px) {
   .upload {
+    &__title {
+      padding: 24px 24px 32px 24px;
+    }
+
     &__video {
       margin: 0px 24px;
       border-top: 1px solid #e1e1e1;
@@ -138,9 +142,15 @@
       flex-direction: row;
       justify-content: center;
 
+      p {
+        margin: 0px 0px 7px 0px;
+      }
+
       &--text {
+        margin: 0px 0px 3px 0px;
         &--area {
           width: 715px;
+          height: 94px;
         }
       }
     }

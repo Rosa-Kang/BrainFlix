@@ -61,10 +61,11 @@
   .newComment {
     margin: 0px 24px;
     &__new {
-      padding-right: 40px;
+      padding-right: 16px;
       &--comment {
-        width: 100%;
+        margin-left: 16px;
         flex-direction: row;
+        justify-content: space-between;
         font-size: 2vw;
         align-items: center;
 
@@ -75,14 +76,14 @@
         textarea {
           font-size: 15px;
           border-radius: 4px;
-          width: 400px;
+          width: 57.3vw;
           height: 1.2em;
           padding: 20px;
         }
 
         #myButton {
-          font-size: 2vw;
-          width: 35.3%;
+          font-size: 1em;
+          width: 31.8%;
           height: 60px;
         }
       }
@@ -113,7 +114,8 @@
 
         textarea {
           width: 85.25%;
-          height: 6px;
+          height: 10px;
+          padding-top: 10px;
         }
       }
     }
